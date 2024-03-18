@@ -1,0 +1,116 @@
+/* Login/signin css start from here...  */
+
+.LoginParentContainer {
+  height: 100vh;
+}
+
+.leftContainer {
+  position: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftInnerContainer {
+  border-radius: 20px;
+  width: 55%;
+}
+
+.leftInnerContainer h3 {
+  padding-bottom: 100px;
+  color: rgb(12, 12, 128);
+}
+
+.LoginButton {
+  padding: 0px 30px;
+  padding-top: 20px;
+}
+
+.loginBtn:hover {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.toggleBtn {
+  position: absolute;
+  right: 16px;
+  top: 6px;
+  z-index: 5;
+}
+
+.rightContainer {
+  overflow: hidden;
+  background-image: url("./assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightInnerContainer {
+  text-align: center;
+  color: white;
+}
+/* Login/signin css ends here...  */
+
+/* dashboard css start from here...  */
+
+.dashboardParentContainer {
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+.LeftNavbarContainer {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+}
+
+.LeftNavbarInnerContainer {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.LeftNavbarHeader {
+  padding: 20px 20px;
+}
+
+.LeftNavbarNavLinks ul,
+.LeftNavbarFooter ul {
+  list-style: none;
+}
+
+.LeftNavbarNavLinks ul li,
+.LeftNavbarFooter ul li {
+  padding: 10px;
+}
+
+.LeftNavbarNavLinks ul li:hover,
+.LeftNavbarFooter ul li:hover {
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+.LeftNavbarFooter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70%;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+}
+
+/* dashboard css ends here...  */
