@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import logo from "../assets/images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
-const SignIn = () => {
+const SignUp = () => {
   const [showCreatePassword, setShowCreatePassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const navigate = useNavigate();
 
   const createPassword = () => {
     setShowCreatePassword(!showCreatePassword);
@@ -71,8 +74,11 @@ const SignIn = () => {
           </label>
           <br />
           <div className="LoginButton">
-            <button className="btn btn-success form-control loginBtn">
-              LOG IN
+            <button
+              className="btn btn-success form-control loginBtn"
+              onClick={() => navigate("/")}
+            >
+              SIGN UP
             </button>
           </div>
         </div>
@@ -87,4 +93,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

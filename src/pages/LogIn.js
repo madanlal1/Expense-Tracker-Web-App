@@ -2,9 +2,23 @@ import React, { useState } from "react";
 import logo from "../assets/images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const LogIn = () => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (email === "madan@win.com" && password === "123") {
+      localStorage.setItem("token", "madan123");
+      navigate("/dashboard");
+    } else {
+      alert("Email or Password is wrong!");
+    }
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -21,7 +35,11 @@ const LogIn = () => {
             type="text"
             className="form-control"
             placeholder="Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
+          <span id="credentials">madan@win.com</span>
+          <br />
           <br />
 
           <div className="input-group">
@@ -30,6 +48,8 @@ const LogIn = () => {
               id="password"
               className="form-control"
               placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <span className="toggleBtn" onClick={togglePasswordVisibility}>
               {showPassword ? (
@@ -39,10 +59,14 @@ const LogIn = () => {
               )}
             </span>
           </div>
-
+          <span id="credentials">123</span>
+          <br />
           <br />
           <div className="LoginButton">
-            <button className="btn btn-success form-control loginBtn">
+            <button
+              className="btn btn-success form-control loginBtn"
+              onClick={handleClick}
+            >
               LOG IN
             </button>
           </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import LeftNavbar from "../components/dashboard/LeftNavbar";
+import TopNavbar from "../components/dashboard/TopNavbar";
+import Header from "../components/dashboard/Header";
 
 const Dashboard = () => {
   return (
@@ -8,9 +10,8 @@ const Dashboard = () => {
         <LeftNavbar />
       </div>
       <div className="col-9 dashboardRightContainer">
-        {/* Top Navbar */}
-        {/* Header */}
-        {/* Body */}
+        <TopNavbar />
+        <Header />
       </div>
     </div>
   );

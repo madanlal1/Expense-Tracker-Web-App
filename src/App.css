@@ -56,6 +56,13 @@
   text-align: center;
   color: white;
 }
+
+#credentials {
+  color: green;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
 /* Login/signin css ends here...  */
 
 /* dashboard css start from here...  */
@@ -63,6 +70,10 @@
 .dashboardParentContainer {
   width: 100%;
   height: 100vh;
+  background-color: rgb(233, 240, 247);
+}
+
+.dashboardLeftContainer {
   color: white;
 }
 
@@ -113,4 +124,123 @@ ul li a {
   padding-left: 10px;
 }
 
+.TopNavbarParentContainer {
+  padding: 20px;
+}
+
+.TopNavbarLeftContainer {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  text-align: right;
+  padding: 25px 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: lightslategray;
+}
+
+.TopNavbarRightContainer {
+  background-color: rgb(192, 210, 243);
+  height: 80px;
+  width: 100%;
+  text-align: left;
+  padding: 20px 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.TopNavbarRightContainer a {
+  text-decoration: none;
+}
+
+.TopNavbarRightContainer img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.HeaderParentContainer,
+.CreateTransactionParentContainer {
+  margin: 20px;
+  margin-bottom: 0px;
+  background-image: url("./assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.createTransactionTitle {
+  position: absolute;
+  left: -160px;
+}
+
+.headerTitle,
+.dateRange,
+.createTransaction {
+  padding: 16px;
+  text-align: center;
+}
+
+.headerTitle h5 {
+  color: rgb(245, 235, 91);
+}
+
+.searchBar {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.searchBarInput {
+  padding-left: 30px;
+}
+
+.searchBar #searchIcon {
+  position: absolute;
+  padding-left: 10px;
+}
+
+.DataTableParentContainer {
+  padding: 0px 20px;
+  width: 100%;
+  height: 60%;
+}
+
+.DataTableInnerContainer {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px 0px;
+}
+
+#billCredit {
+  color: red;
+}
+
+#billDebit {
+  color: green;
+}
+
+.DataTablePagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* dashboard css ends here...  */
+
+/* transaction css start from here...  */
+
+.createTransactionParentSecondContainer {
+  padding: 20px;
+}
+
+.selectTransaction {
+  margin-bottom: 40px;
+}
+
+/* transaction css ends here...  */
