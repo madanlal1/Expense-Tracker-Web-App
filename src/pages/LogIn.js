@@ -5,25 +5,44 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const LogIn = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    if (email === "madan@win.com" && password === "123") {
-      localStorage.setItem("token", "madan123");
-      navigate("/dashboard");
-    } else {
-      alert("Email or Password is wrong!");
+  const handleClick = async () => {
+    try {
+      const response = await fetch(
+        "https://expense-tracker-task-production.up.railway.app/user/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+        }
+      );
+      console.log(response);
+
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem("token", data.token);
+        navigate("/dashboard");
+      } else {
+        const errorMessage = await response.text();
+        alert("email or password is not correct!");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
     }
   };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
-    let myPass = document.getElementById("password");
-    showPassword ? (myPass.type = "password") : (myPass.type = "text");
   };
 
   return (
@@ -38,14 +57,13 @@ const LogIn = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <span id="credentials">madan@win.com</span>
+          <span id="credentials">user@gmail.com</span>
           <br />
           <br />
 
           <div className="input-group">
             <input
-              type="password"
-              id="password"
+              type={showPassword ? "text" : "password"}
               className="form-control"
               placeholder="Password"
               value={password}
@@ -59,7 +77,7 @@ const LogIn = () => {
               )}
             </span>
           </div>
-          <span id="credentials">123</span>
+          <span id="credentials">Password@123</span>
           <br />
           <br />
           <div className="LoginButton">
