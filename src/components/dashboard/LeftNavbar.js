@@ -30,15 +30,15 @@ const LeftNavbar = () => {
         <hr />
         <div className="LeftNavbarNavLinks">
           <ul>
-            <li>
+            <li onClick={() => navigate("/transaction")}>
               <FontAwesomeIcon icon={faMoneyBillTransfer} />
               <NavLink to="/transaction">Transactions</NavLink>
             </li>
-            <li>
+            <li onClick={() => navigate("/payment")}>
               <FontAwesomeIcon icon={faMoneyCheckDollar} />
               <NavLink to="/payment">Payments</NavLink>
             </li>
-            <li>
+            <li onClick={() => navigate("/card")}>
               <FontAwesomeIcon icon={faCreditCard} />
               <NavLink to="/card">Cards</NavLink>
             </li>

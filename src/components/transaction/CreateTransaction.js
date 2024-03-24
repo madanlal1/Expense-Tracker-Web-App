@@ -18,7 +18,6 @@ const CreateTransaction = () => {
 
   const handleSubmit = async () => {
     try {
-      console.log(typeof amount);
       const response = await fetch(
         "https://expense-tracker-task-production.up.railway.app/transaction/65bd1c3bc3e497073f55f399",
         {

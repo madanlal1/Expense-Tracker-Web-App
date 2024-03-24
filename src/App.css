@@ -250,3 +250,15 @@ ul li a {
 }
 
 /* transaction css ends here...  */
+
+/* wallet css start from here  */
+
+.createWalletParentDiv {
+  padding: 20px;
+}
+
+.createBtnDiv {
+  padding: 0px 200px;
+}
+
+/* wallet css ends here  */

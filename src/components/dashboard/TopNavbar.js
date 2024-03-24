@@ -16,7 +16,7 @@ const TopNavbar = () => {
         </div>
       </div>
       <div className="col-2">
-        <div className="TopNavbarRightContainer">
+        <div className="TopNavbarRightContainer  p-3">
           <a href="/dashboard">
             <img src={profile} alt="profileImage" width="40px" />
             Madan Lal
