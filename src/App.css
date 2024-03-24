@@ -218,11 +218,13 @@ ul li a {
   padding: 20px 0px;
 }
 
-#billCredit {
+#billCredit,
+#delete {
   color: red;
 }
 
-#billDebit {
+#billDebit,
+#edit {
   color: green;
 }
 
@@ -241,6 +243,10 @@ ul li a {
 
 .selectTransaction {
   margin-bottom: 40px;
+}
+
+.btnDiv {
+  padding: 20px;
 }
 
 /* transaction css ends here...  */

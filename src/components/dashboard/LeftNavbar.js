@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import {
   faMoneyBillTransfer,
@@ -22,24 +23,24 @@ const LeftNavbar = () => {
     <div className="LeftNavbarContainer">
       <div className="LeftNavbarInnerContainer">
         <div className="LeftNavbarHeader">
-          <a href="/dashboard">
+          <NavLink to="/dashboard">
             <img src={logo} alt="logo" width="40%" />
-          </a>
+          </NavLink>
         </div>
         <hr />
         <div className="LeftNavbarNavLinks">
           <ul>
             <li>
               <FontAwesomeIcon icon={faMoneyBillTransfer} />
-              <a href="/transaction">Transactions</a>
+              <NavLink to="/transaction">Transactions</NavLink>
             </li>
             <li>
-              <FontAwesomeIcon icon={faMoneyCheckDollar} />{" "}
-              <a href="#">Payments</a>
+              <FontAwesomeIcon icon={faMoneyCheckDollar} />
+              <NavLink to="/payment">Payments</NavLink>
             </li>
             <li>
               <FontAwesomeIcon icon={faCreditCard} />
-              <a href="#">Cards</a>
+              <NavLink to="/card">Cards</NavLink>
             </li>
           </ul>
         </div>
@@ -47,9 +48,9 @@ const LeftNavbar = () => {
           <ul>
             <li>
               <FontAwesomeIcon icon={faRightFromBracket} />
-              <a href="/" onClick={handleLogout}>
+              <NavLink to="/" onClick={handleLogout}>
                 Logout
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

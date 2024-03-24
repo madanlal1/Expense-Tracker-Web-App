@@ -18,6 +18,12 @@ const LogIn = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Content-Length": "<calculated when request is sent>",
+            Host: "<calculated when request is sent>",
+            "User-Agent": "PostmanRuntime/7.37.0",
+            Accept: "*/*",
+            "Accept-Encoding": "gzip, deflate, br",
+            Connection: "keep-alive",
           },
           body: JSON.stringify({
             email: email,
@@ -25,14 +31,12 @@ const LogIn = () => {
           }),
         }
       );
-      console.log(response);
 
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.token);
         navigate("/dashboard");
       } else {
-        const errorMessage = await response.text();
         alert("email or password is not correct!");
       }
     } catch (error) {

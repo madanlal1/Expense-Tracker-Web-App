@@ -4,6 +4,8 @@ import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import Dashboard from "./pages/Dashboard";
 import Transaction from "./pages/Transaction";
+import Payment from "./pages/Payment";
+import Card from "./pages/Card";
 
 function App() {
   // Define a function to check if the user is authenticated
@@ -32,6 +34,8 @@ function App() {
         path="/transaction"
         element={<ProtectedRoute element={Transaction} />}
       />
+      <Route path="/payment" element={<ProtectedRoute element={Payment} />} />
+      <Route path="/card" element={<ProtectedRoute element={Card} />} />
     </Routes>
   );
 }
